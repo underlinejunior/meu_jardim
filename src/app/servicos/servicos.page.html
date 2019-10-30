@@ -1,0 +1,71 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-item>
+      <ion-button color="success" (click)="exibirMenuOpcoes($event)">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+      <img src="./assets/logotitle.svg" />
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>por Serviço</ion-label>
+      <ion-radio slot="start" color="success" value="servico" (click)="porServico()"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>por Diária</ion-label>
+      <ion-radio slot="start" color="success" value="diaria" (click)="porDiaria()"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>por Semana</ion-label>
+      <ion-radio slot="start" color="success" value="semana" (click)="porSemana()"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+<ion-item>
+<ng-container *ngIf="servico.servico">
+  <ion-label>Tipo de Serviço:</ion-label>
+  <ion-select placeholder="Selecione">
+    <ion-select-option value="aguar">aguar o jardim</ion-select-option>
+    <ion-select-option value="podar">podar arvores</ion-select-option>
+    <ion-select-option value="capinar">capinar o jardim</ion-select-option>
+    <ion-select-option value="grama">trocar a grama</ion-select-option>
+    <ion-select-option value="incestar">incestamento</ion-select-option>
+    <ion-select-option value="paisagismo">paisagismo</ion-select-option>
+  </ion-select>
+  
+  </ng-container>
+</ion-item>
+
+<ng-container *ngIf="servico.semana">
+<ion-item>
+<ion-label>quantos dias por semana:</ion-label>
+<ion-range min='1' max='7' step='1'pin></ion-range>
+</ion-item>
+
+<ion-item>
+<ion-label>quantas semanas por mês:</ion-label>
+<ion-range min='1' max='4' step='1' pin></ion-range>
+</ion-item>
+
+</ng-container>
+
+
+<ion-item>
+  <ng-container *ngIf="servico.diaria">
+
+  </ng-container>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">observações:</ion-label>
+  <ion-textarea placeholder="informe aqui: data, melhor horário e outras observações."></ion-textarea>
+</ion-item>
+
+</ion-content>

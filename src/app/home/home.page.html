@@ -1,14 +1,48 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-item>
+      <ion-button color="success" (click)="exibirMenuOpcoes($event)">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+      <img src="./assets/logotitle.svg"/>
+      </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-card><ion-card-content>
+  <ion-card-title>Jardinagem:</ion-card-title>
+    <p> Ter um jardim à disposição é sempre uma ótima ideia. A proximidade com as plantas sempre nos traz momentos de harmonia e serenidade que ajudam a escapar do estresse e do caos cotidiano – principalmente para quem morar em grandes cidades. Se você tem a sorte de contar com um espaço ao ar livre, as opções para decorar seu jardim são ainda maiores e,certamente, menos trabalhosas do que você imagina.
+  São diferentes tamanhos e estilos de jardins onde, certamente, um será perfeito para o seu lar. E sabe o que é melhor?
+  Boa parte deles é bem simples de ser feita.</p>
+  <ion-card-title>Alguns tipos de plantas:</ion-card-title>
+    <p> As variedades de mudas que você pode comprar ficara ao seu criterio, entretanto, algumas mudas são muitos delicadas, pois não pode ser esposta ao sol:</p>
+  </ion-card-content></ion-card>
+
+  <ion-item><ion-thumbnail slot="start">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Rosa_chinensis.jpg"></ion-img>
+</ion-thumbnail><ion-label>Rosa</ion-label></ion-item>
+
+  <ion-item><ion-thumbnail slot="start">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Catharanthus_roseus_%28S%C3%A3o_Lu%C3%ADs_-_Brasil%29.JPG"></ion-img>
+</ion-thumbnail><ion-label>Boa Noite</ion-label></ion-item>
+
+  <ion-item><ion-thumbnail slot="start">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Single_lavendar_flower02.jpg"></ion-img>
+</ion-thumbnail><ion-label>Lavanda</ion-label></ion-item>
+
+<ion-item><ion-thumbnail>
+<ion-img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Euphorbia_Milii_flowers.jpg"></ion-img>
+</ion-thumbnail><ion-label>Coroa de Cristo</ion-label></ion-item>
+
+<ion-item><ion-thumbnail slot="start">
+<ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Orchis_militaris_flowers.jpg"></ion-img>
+</ion-thumbnail><ion-label>Orquidia</ion-label></ion-item>
+
+<h3>Links</h3>
+<ion-list>
+  <ion-item href="#" onclick="window.open('https://www.plantei.com.br', '_system', 'location=yes'); return false;"> plantei.com.br</ion-item>
+  <ion-item href="#" onclick="window.open('https://www.jardineiro.net', '_system', 'location=yes'); return false;">jardineiro.net</ion-item>
+  <ion-item href="#" onclick="window.open('https://www.tocadoverde.com.br', '_system', 'location=yes'); return false;">tocadoverde.com.br</ion-item>
+</ion-list>
 </ion-content>

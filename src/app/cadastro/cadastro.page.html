@@ -1,0 +1,61 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-item>
+    <ion-button color="success" (click)="exibirMenuOpcoes($event)">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+            <img src="./assets/logotitle.svg" />
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="destaque">Cadastre-se:</h3>
+  <ion-item>
+    <ion-label position="floating"><strong>Nome:</strong></ion-label>
+    <ion-input color="success" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"><strong>Senha:</strong></ion-label>
+    <ion-input color="success" type="password"></ion-input>
+  </ion-item>
+<ion-item>
+  <ion-label><strong>Email:</strong></ion-label>
+  <ion-input placeholder="informe seu email" required></ion-input>
+</ion-item>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>Cliente</ion-label>
+      <ion-radio slot="start" color="success" value="cliente"  (click)="selectCliente()"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Jardineiro</ion-label>
+      <ion-radio slot="start" color="tertiary" value="jardineiro" (click)="selectJardineiro()"></ion-radio>
+    </ion-item></ion-radio-group>
+
+  <ng-container *ngIf="configs.jardineiro">
+    <ion-button><ion-label>foto perfil</ion-label><ion-icon name="camera"></ion-icon></ion-button>
+    <ion-item>
+      <ion-label>Já trabalhou na area com carteira assinada</ion-label>
+      <ion-checkbox slot="start" color="tertiary" value="experiencia" (click)="changeExperiencia()"></ion-checkbox>
+
+      <ng-container *ngIf="!configs.experiencia">
+        <ion-button>
+          <ion-label>comprovante</ion-label>
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </ng-container>
+</ion-item><ion-item>
+    <ion-label>possui transporte</ion-label>
+    <ion-checkbox slot="start" color="tertiary" value="transporte" (click)="changeTransporte()"></ion-checkbox>
+
+    <ng-container *ngIf="!configs.transporte">
+      <ion-button><ion-label>CNH</ion-label><ion-icon name="camera"></ion-icon></ion-button>
+      <ion-button><ion-label>LICENCIAMENTO</ion-label><ion-icon name="camera"></ion-icon></ion-button>
+    </ng-container>
+</ion-item>
+</ng-container>  
+</ion-content>
+
+
